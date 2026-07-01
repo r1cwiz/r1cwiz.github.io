@@ -3,7 +3,8 @@ This repository contains the source code for my portfolio, where I showcase my p
 
 # Website
 
-# Hi! I'm **Eric**, an Informatics student and currently working at a tax consulting firm.
+#About Me
+Hi! I'm **Eric**, an Informatics student and currently working at a tax consulting firm.
 I'm passionate about technology, business, and continuous learning. My current goal is to build strong skills in IT Infrastructure while exploring business consulting and startups. I'm actively building real-world projects, and preparing for international remote opportunities.
 
 # Project

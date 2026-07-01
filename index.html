@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eric — Full-Stack Developer &amp; UI Designer</title>
+  <meta name="description" content="Portfolio of Eric Wijaya, a full-stack developer and UI designer building fast, accessible, and beautifully-crafted digital products.">
+  <meta name="keywords" content="frontend developer, full stack developer, UI designer, portfolio, web developer">
+  <meta name="author" content="Eric Wijaya">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Eric Wijaya — Full-Stack Developer & UI Designer">
+  <meta property="og:description" content="I design and build fast, accessible, and delightful digital products — from pixel-perfect interfaces to scalable backend systems.">
+  <meta property="og:image" content="assets/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon (inline placeholder — replace with your own /assets/favicon.svg) -->
+  <!-- <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%233B82F6'/%3E%3Cstop offset='100%25' stop-color='%238B5CF6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Ctext x='50' y='67' font-family='Arial, sans-serif' font-size='52' font-weight='700' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E"> -->
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="is-loading">
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-logo">ERIC</div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container" aria-label="Primary">
+      <a href="#home" class="nav-logo">My<span>Portfolio</span></a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active" data-link>Home</a></li>
+        <li><a href="#about" class="nav-link" data-link>About</a></li>
+        <li><a href="#skills" class="nav-link" data-link>Tech Stack</a></li>
+        <li><a href="#projects" class="nav-link" data-link>Projects</a></li>
+        <li><a href="#contact" class="nav-link" data-link>Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-sm btn-primary nav-cta">Let's Talk</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+      <div class="hero-blobs" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-text">
+          <p class="hero-greeting" data-reveal>Hello, I'm</p>
+          <h1 class="hero-name" data-reveal>Eric Wijaya</h1>
+          <h2 class="hero-role" data-reveal>
+            <span id="typedText" aria-live="polite"></span><span class="type-cursor" aria-hidden="true"></span>
+          </h2>
+          <p class="hero-desc" data-reveal>
+            I design and build fast, accessible, and delightful digital products —
+            from pixel-perfect interfaces to scalable backend systems.
+          </p>
+
+          <div class="hero-actions" data-reveal>
+            <a href="assets/CV-Eric.pdf" class="btn btn-primary btn-lg js-download-cv" download>
+              <i class="fa-solid fa-download" aria-hidden="true"></i> Download CV
+            </a>
+            <a href="#contact" class="btn btn-outline btn-lg">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Contact Me
+            </a>
+          </div>
+
+          <div class="hero-socials" data-reveal>
+            <a href="https://github.com/" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="mailto:ericwiryawan9@gmail.com" class="social-icon" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <div class="hero-photo-ring">
+            <div class="hero-photo">
+                <img src="assets/Helo.jpg" alt="My Profile">
+            </div>
+            <div class="orbit-badge orbit-badge-1" aria-hidden="true"><i class="fa-brands fa-python"></i></div>
+            <div class="orbit-badge orbit-badge-2" aria-hidden="true"><i class="fa-brands fa-node-js"></i></div>
+            <div class="orbit-badge orbit-badge-3" aria-hidden="true"><i class="fa-brands fa-js"></i></div>
+            <div class="orbit-badge orbit-badge-4" aria-hidden="true"><i class="fa-brands fa-figma"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Turning ideas into <span class="text-gradient">interactive experiences</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-visual" data-reveal>
+            <div class="about-photo-frame">
+              <div class="about-photo">
+                    <img src="assets/Eric.png" alt="Eric Profile Photo">
+              </div>
+            </div>
+            <div class="experience-badge">
+              <strong>2+</strong>
+              <span>Years<br>Experience</span>
+            </div>
+          </div>
+
+          <div class="about-content" data-reveal>
+            <p class="about-lead">
+              I'm a full-stack developer and UI designer based in San Francisco, specializing
+              in building exceptional digital experiences that live at the intersection of
+              design and engineering.
+            </p>
+            <p>
+              Over the past four years I've worked with startups and product teams to ship
+              interfaces that are as fast and accessible as they are beautiful — writing
+              clean component architecture on the frontend and dependable, well-tested
+              services on the backend. I care about the details: the easing on a hover
+              state, the loading skeleton that never shows, the API that never times out.
+            </p>
+
+            <div class="about-stats">
+              <div class="stat-card spotlight-target">
+                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                <div class="stat-value"><span class="stat-number" data-count="2">0</span>+</div>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-card spotlight-target">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                <div class="stat-value"><span class="stat-number" data-count="2">0</span></div>
+                <span class="stat-label">Certifications</span>
+              </div>
+              <div class="stat-card spotlight-target">
+                <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+                <div class="stat-value"><span class="stat-number" data-count="3">0</span>+</div>
+                <span class="stat-label">Projects Completed</span>
+              </div>
+              <!-- <div class="stat-card spotlight-target">
+                <i class="fa-solid fa-mug-hot" aria-hidden="true"></i>
+                <div class="stat-value"><span class="stat-number" data-count="1200">0</span>+</div>
+                <span class="stat-label">Cups of Coffee</span>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="timeline">
+          <h3 class="timeline-title" data-reveal>My Journey</h3>
+          <div class="timeline-track">
+            <div class="timeline-item" data-reveal>
+              <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+              <div class="timeline-card">
+                <span class="timeline-year">2019</span>
+                <h4>B.Sc. in Computer Science</h4>
+                <p>State University — graduated with honors, focused on human-computer interaction and distributed systems.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-reveal>
+              <div class="timeline-dot"><i class="fa-solid fa-code"></i></div>
+              <div class="timeline-card">
+                <span class="timeline-year">2020</span>
+                <h4>Frontend Developer, StartupX</h4>
+                <p>Built and shipped the core web dashboard from zero to production for an early-stage fintech startup.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-reveal>
+              <div class="timeline-dot"><i class="fa-solid fa-layer-group"></i></div>
+              <div class="timeline-card">
+                <span class="timeline-year">2022</span>
+                <h4>Full-Stack Developer, TechCorp</h4>
+                <p>Owned end-to-end features across a React frontend and Node.js services layer used by 200k+ monthly users.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-reveal>
+              <div class="timeline-dot"><i class="fa-solid fa-rocket"></i></div>
+              <div class="timeline-card">
+                <span class="timeline-year">2024</span>
+                <h4>Senior Frontend Engineer, Nimbus Labs</h4>
+                <p>Led the design system rebuild and mentored a team of four engineers on performance and accessibility.</p>
+              </div>
+            </div>
+            <div class="timeline-item" data-reveal>
+              <div class="timeline-dot"><i class="fa-solid fa-star"></i></div>
+              <div class="timeline-card">
+                <span class="timeline-year">2026</span>
+                <h4>Freelance &amp; Open to Opportunities</h4>
+                <p>Currently partnering with select teams on frontend architecture and product design work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Skills / Tech Stack -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Tech Stack</span>
+          <h2 class="section-title">Tools I <span class="text-gradient">Work With</span></h2>
+          <p class="section-subtitle">A snapshot of the languages, frameworks, and tools I reach for most.</p>
+        </div>
+
+        <div class="skills-categories">
+
+          <div class="skill-category spotlight-target" data-reveal>
+            <h3><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Frontend</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-brands fa-html5"></i><span>HTML5</span><span class="skill-percent">95%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="95"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span><span class="skill-percent">92%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="92"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-brands fa-js"></i><span>JavaScript</span><span class="skill-percent">90%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-solid fa-code"></i><span>TypeScript</span><span class="skill-percent">85%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+              </div>
+              <!-- <div class="skill-item">
+                <div class="skill-info"><i class="fa-brands fa-react"></i><span>React</span><span class="skill-percent">93%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="93"></div></div>
+              </div> -->
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-solid fa-layer-group"></i><span>Next.js</span><span class="skill-percent">88%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="88"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-solid fa-wind"></i><span>Tailwind CSS</span><span class="skill-percent">87%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="87"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category spotlight-target" data-reveal>
+            <h3><i class="fa-solid fa-server" aria-hidden="true"></i> Backend</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-brands fa-node-js"></i><span>Node.js</span><span class="skill-percent">73%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="73"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-solid fa-bolt"></i><span>Express</span><span class="skill-percent">64%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="64"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-brands fa-laravel"></i><span>Laravel</span><span class="skill-percent">68%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="68"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-brands fa-php"></i><span>PHP</span><span class="skill-percent">71%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="71"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category spotlight-target" data-reveal>
+            <h3><i class="fa-solid fa-database" aria-hidden="true"></i> Database</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-solid fa-table"></i><span>MySQL</span><span class="skill-percent">86%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="86"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-solid fa-server"></i><span>PostgreSQL</span><span class="skill-percent">82%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-solid fa-leaf"></i><span>MongoDB</span><span class="skill-percent">80%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category spotlight-target" data-reveal>
+            <h3><i class="fa-solid fa-toolbox" aria-hidden="true"></i> Tools</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-brands fa-git-alt"></i><span>Git</span><span class="skill-percent">84%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="94"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-brands fa-github"></i><span>GitHub</span><span class="skill-percent">83%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="93"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-brands fa-docker"></i><span>Docker</span><span class="skill-percent">76%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="76"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-brands fa-figma"></i><span>Figma</span><span class="skill-percent">80%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-solid fa-terminal"></i><span>VS Code</span><span class="skill-percent">97%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="97"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-brands fa-linux"></i><span>Linux</span><span class="skill-percent">75%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-solid fa-infinity"></i><span>Arduino IDE</span><span class="skill-percent">75%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category spotlight-target" data-reveal>
+            <h3><i class="fa-solid fa-code"></i> Languages</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-brands fa-python"></i><span>Python</span><span class="skill-percent">86%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="86"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-regular fa-file-code"></i><span>C#</span><span class="skill-percent">82%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-brands fa-java"></i><span>Java</span><span class="skill-percent">80%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category spotlight-target" data-reveal>
+            <h3><i class="fa-solid fa-puzzle-piece"></i> GameDev</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-brands fa-unity"></i><span>Unity</span><span class="skill-percent">86%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="86"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-solid fa-robot"></i><span>Godot</span><span class="skill-percent">82%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><i class="fa-solid fa-ghost"></i><span>Aseprite</span><span class="skill-percent">80%</span></div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+          <p class="section-subtitle">A selection of products I've designed, built, and shipped.</p>
+        </div>
+
+        <div class="project-grid">
+
+          <article class="project-card spotlight-target" data-reveal>
+            <div class="project-image proj-1">
+              <img src="" alt="">
+            </div>
+            <div class="project-body">
+              <h3>Be right back</h3>
+              <p>Comming Soon</p>
+              <div class="project-tags">
+                <span>React</span><span>Node.js</span><span>Stripe</span><span>MongoDB</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="#" class="project-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- <article class="project-card spotlight-target" data-reveal>
+            <div class="project-image proj-2">
+              <i class="fa-solid fa-table-columns" aria-hidden="true"></i>
+            </div>
+            <div class="project-body">
+              <h3>TaskFlow</h3>
+              <p>A collaborative kanban and sprint-planning tool with drag-and-drop boards, and live multi-user cursors.</p>
+              <div class="project-tags">
+                <span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="#" class="project-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card spotlight-target" data-reveal>
+            <div class="project-image proj-3">
+              <i class="fa-solid fa-cloud-sun" aria-hidden="true"></i>
+            </div>
+            <div class="project-body">
+              <h3>WeatherScope</h3>
+              <p>A weather dashboard with animated forecasts, interactive maps, and severe-weather push alerts.</p>
+              <div class="project-tags">
+                <span>JavaScript</span><span>Chart.js</span><span>REST API</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="#" class="project-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card spotlight-target" data-reveal>
+            <div class="project-image proj-4">
+              <i class="fa-solid fa-comments" aria-hidden="true"></i>
+            </div>
+            <div class="project-body">
+              <h3>ChatWave</h3>
+              <p>A real-time messaging app with typing indicators, read receipts, and end-to-end encrypted rooms.</p>
+              <div class="project-tags">
+                <span>React</span><span>Socket.io</span><span>Express</span><span>MongoDB</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="#" class="project-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card spotlight-target" data-reveal>
+            <div class="project-image proj-5">
+              <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+            </div>
+            <div class="project-body">
+              <h3>FitTrack</h3>
+              <p>A mobile-first fitness tracker with workout logging, streaks, and progress charts synced across devices.</p>
+              <div class="project-tags">
+                <span>React</span><span>Tailwind CSS</span><span>Firebase</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="#" class="project-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card spotlight-target" data-reveal>
+            <div class="project-image proj-6">
+              <i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
+            </div>
+            <div class="project-body">
+              <h3>DevBlog CMS</h3>
+              <p>A headless blogging platform with a markdown editor, scheduled publishing, and a Laravel content API.</p>
+              <div class="project-tags">
+                <span>Next.js</span><span>Laravel</span><span>MySQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="#" class="project-link"><i class="fa-brands fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </article> -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Download CV CTA -->
+    <section class="resume-cta" id="resume">
+      <div class="container">
+        <div class="cta-card" data-reveal>
+          <div class="cta-glow" aria-hidden="true"></div>
+          <i class="fa-solid fa-file-arrow-down cta-icon" aria-hidden="true"></i>
+          <h2>Want the full story?</h2>
+          <p>Download my resume for a complete overview of my experience, skills, and education.</p>
+          <a href="assets/resume.pdf" class="btn btn-primary btn-lg btn-magnetic js-download-cv" download>
+            <i class="fa-solid fa-download" aria-hidden="true"></i> Download CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Contact</span>
+          <h2 class="section-title">Let's Build Something <span class="text-gradient">Great Together</span></h2>
+          <p class="section-subtitle">Have a project in mind, or just want to say hello? My inbox is open.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info" data-reveal>
+            <a href="mailto:hello@alexrivera.dev" class="contact-card spotlight-target">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <div>
+                <span>Email</span>
+                <p>ericwiryawan9@gmail.com</p>
+              </div>
+            </a>
+            <a href="tel:+6283190272526" class="contact-card spotlight-target">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <div>
+                <span>Phone</span>
+                <p>+62 (831) 9027-2526</p>
+              </div>
+            </a>
+            <div class="contact-card spotlight-target">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <div>
+                <span>Location</span>
+                <p>Medan, Indonesia</p>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="https://github.com/" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+              <a href="https://linkedin.com/" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://instagram.com/" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <div class="map-placeholder" role="img" aria-label="Map showing location in San Francisco, California">
+              <div class="map-grid" aria-hidden="true"></div>
+              <div class="map-pin" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
+              <span class="map-label">Medan, Indonesia</span>
+            </div>
+          </div>
+
+          <!-- <form class="contact-form glass-card" id="contactForm" novalidate data-reveal>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+                <span class="form-error" id="nameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                <span class="form-error" id="emailError"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+              <span class="form-error" id="subjectError"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">
+              <span>Send Message</span> <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            </button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form> -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <a href="#home" class="nav-logo">My<span>Portfolio</span></a>
+      <p class="footer-copy">&copy; <span id="year">2026</span> Eric Wijaya. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="footer-socials">
+        <a href="https://github.com/" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

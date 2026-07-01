@@ -11,7 +11,7 @@ I'm passionate about technology, business, and continuous learning. My current g
 Still Building
 
 **Tech Stack**
-- **Frontend**: `Next.js`, `TypeScript`, `Tailwind CSS`
+- **Frontend**: `Next.js`, `TypeScript`, `Tailwind CSS`, `Bootstrap`
 - **Backend**: `Spring Boot`, `Exspress.js`, `Nestjs`, `WebSockets`, `Rest APIs`
 - **DevOPS**: `Docker`, `VPS`
 - **Languages**: `TypeScript`, `Python`, `JavaScript`, `Java`, `C#`

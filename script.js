@@ -202,7 +202,7 @@ function initTypingAnimation() {
   const el = document.getElementById('typedText');
   if (!el) return;
 
-  const words = ['Frontend Developer', 'Backend Developer', 'Full Stack Developer', 'Game Developer'];
+  const words = ['Frontend Developer', 'Backend Developer', 'Full Stack Developer', 'Game Developer', 'Editor Video'];
 
   if (prefersReducedMotion()) {
     el.textContent = words[0];

@@ -13,6 +13,7 @@ Still Building
 **Tech Stack**
 - **Frontend**: `Next.js`, `TypeScript`, `Tailwind CSS`
 - **Backend**: `Spring Boot`, `Exspress.js`, `Nestjs`, `WebSockets`, `Rest APIs`
+- **Database**: `MySQL`, `PostgreSQL`, `MongoDB`
 - **DevOPS**: `Docker`, `VPS`
 - **Languages**: `TypeScript`, `Python`, `JavaScript`, `Java`, `C#`
 - **Tools**: `Postman`, `Git`, `Figma`, `Linux`

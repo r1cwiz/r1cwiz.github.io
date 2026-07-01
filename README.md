@@ -1,16 +1,15 @@
-# r1cwiz portofolio
+**r1cwiz portofolio**
 This repository contains the source code for my portfolio, where I showcase my projects and technical skills
 
-# Website
+**Website**
 
-# About Me
 Hi! I'm **Eric**, an Informatics student and currently working at a tax consulting firm.
 I'm passionate about technology, business, and continuous learning. My current goal is to build strong skills in IT Infrastructure while exploring business consulting and startups. I'm actively building real-world projects, and preparing for international remote opportunities.
 
-# Project
+**Project**
 Still Building
 
-# Tech Stack
+**Tech Stack**
 - **Frontend**: `Next.js`, `TypeScript`, `Tailwind CSS`
 - **Backend**: `Spring Boot`, `Exspress.js`, `Nestjs`, `WebSockets`, `Rest APIs`
 - **DevOPS**: `Docker`, `VPS`

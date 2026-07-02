@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initMobileMenu();
   initReducedMotionScroll();
-  initTypingAnimation();
+  // initTypingAnimation();
   initParticleNetwork();
   initScrollReveal();
   initCounters();
@@ -35,25 +35,54 @@ const isTouchDevice = () =>
 /* ---------------------------------------------------------------------- */
 /* Preloader                                                               */
 /* ---------------------------------------------------------------------- */
+function splitHeroName() {
+  const el = document.querySelector('.hero-name');
+  if (!el) return;
+
+  const text = el.textContent.trim();
+  el.setAttribute('aria-label', text);
+  el.textContent = '';
+
+  [...text].forEach((char, i) => {
+    const span = document.createElement('span');
+    span.className = 'split-char';
+    span.style.setProperty('--i', i);
+    span.textContent = char === ' ' ? '\u00A0' : char;
+    span.setAttribute('aria-hidden', 'true');
+    el.appendChild(span);
+  });
+}
 
 function initPreloader() {
   const preloader = document.getElementById('preloader');
   if (!preloader) return;
 
+  let hidden = false;
+
   const hide = () => {
+    if (hidden) return;
+    hidden = true;
+
     document.body.classList.remove('is-loading');
+    revealHero();
+
     preloader.classList.add('preloader-hidden');
     setTimeout(() => preloader.remove(), 700);
   };
 
-  // Give the entrance animation a minimum beat, then hide once the page has loaded.
   if (document.readyState === 'complete') {
     setTimeout(hide, 500);
   } else {
-    window.addEventListener('load', () => setTimeout(hide, 500));
-    // Safety net in case 'load' never fires (e.g. slow third-party assets).
+    window.addEventListener('load', () => setTimeout(hide, 500), { once: true });
     setTimeout(hide, 3500);
   }
+}
+
+function revealHero() {
+  document.body.classList.add('hero-ready');
+  // Give the "Alex Rivera" letters and role line time to land before the
+  // typing loop takes over the role text.
+  setTimeout(initTypingAnimation, 950);
 }
 
 /* ---------------------------------------------------------------------- */
@@ -199,6 +228,7 @@ function initReducedMotionScroll() {
 /* ---------------------------------------------------------------------- */
 
 function initTypingAnimation() {
+  // console.log("Typing started");
   const el = document.getElementById('typedText');
   if (!el) return;
 
